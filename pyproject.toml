@@ -1,0 +1,23 @@
+name = "my_project"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.lint.dependencies]
+black = "^24.0"
+flake8 = "^6.0"
+isort = "^5.12"
+mypy = "^1.4"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+files = ["src/**/*.py"]
